@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 if(plain.charAt(i)==alfabet.charAt(j)){
                     tampung[i] = key.charAt(j);
                     break;
+                }else if(plain.charAt(i)==' '){
+                    tampung[i] = ' ';
                 }
             }
         }
