@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">substitusi-kriptografi</string>
+    <string name="keterangan">Masukan Plain Text</string>
+    <string name="hint_edittext">masukan plaintext</string>
 </resources>
