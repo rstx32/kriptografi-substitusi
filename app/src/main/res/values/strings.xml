@@ -2,4 +2,5 @@
     <string name="app_name">substitusi-kriptografi</string>
     <string name="keterangan">Masukan Plain Text</string>
     <string name="hint_edittext">masukan plaintext</string>
+    <string name="info_cipher_text">Cipher Text</string>
 </resources>

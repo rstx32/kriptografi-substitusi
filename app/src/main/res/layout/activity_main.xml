@@ -14,26 +14,46 @@
         tools:layout_editor_absoluteY="30dp">
 
         <TextView
-            android:id="@+id/textview-info"
+            android:id="@+id/textview_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/keterangan"
             android:paddingTop="30dp"
-            android:textAlignment="center"/>
+            android:text="@string/keterangan"
+            android:textAlignment="center"
+            android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editText-plaintext"
+            android:id="@+id/editText_plaintext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="@string/hint_edittext"/>
+            android:hint="@string/hint_edittext"
+            android:textAlignment="center"/>
 
         <Button
-            android:id="@+id/button-enkripsi"
+            android:id="@+id/button_enkripsi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enkripsi" />
+            android:text="Enkripsi"
+            android:onClick="enkripsi"/>
+
+        <TextView
+            android:id="@+id/textview_info_cipher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/info_cipher_text"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editText_cipher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="hasil cipher text"
+            android:editable="false"
+            android:textAlignment="center"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
