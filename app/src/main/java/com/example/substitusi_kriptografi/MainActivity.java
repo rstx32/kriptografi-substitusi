@@ -27,19 +27,27 @@ public class MainActivity extends AppCompatActivity {
         String plain    = plaintext.getText().toString();
         char[] tampung  = new char[plain.length()];
 
+//        for(int i=0; i<plain.length(); i++){
+//            for(int j=0; j<alfabet.length(); j++){
+//                if(plain.charAt(i)==alfabet.charAt(j)){
+//                    tampung[i] = key.charAt(j);
+//                    break;
+//                }else if(plain.charAt(i)==' '){
+//                    tampung[i] = ' ';
+//                }
+//            }
+//        }
+
+        // menggunakan ascii
         for(int i=0; i<plain.length(); i++){
-            for(int j=0; j<alfabet.length(); j++){
-                if(plain.charAt(i)==alfabet.charAt(j)){
-                    tampung[i] = key.charAt(j);
-                    break;
-                }else if(plain.charAt(i)==' '){
-                    tampung[i] = ' ';
-                }
-            }
+            int x = (plain.charAt(i)-94)%26+97;
+            tampung[i] = (char)x;
         }
 
         String hasil = new String(tampung);
 
         ciphertext.setText(hasil);
+
+
     }
 }
