@@ -23,14 +23,15 @@ public class MainActivity extends AppCompatActivity {
     public void enkripsi(View view) {
         // menggunakan tabel
         String alfabet  = "abcdefghijklmnopqrstuvwxyz";
-        String key      = "defghijklmnopqrstuvwxyzabc";
+        String key1     = "defghijklmnopqrstuvwxyzabc";
+        String key2     = "ghijklmnopqrstuvwxyzabcdef";
         String plain    = plaintext.getText().toString();
         char[] tampung  = new char[plain.length()];
 
 //        for(int i=0; i<plain.length(); i++){
 //            for(int j=0; j<alfabet.length(); j++){
 //                if(plain.charAt(i)==alfabet.charAt(j)){
-//                    tampung[i] = key.charAt(j);
+//                    tampung[i] = key1.charAt(j);
 //                    break;
 //                }else if(plain.charAt(i)==' '){
 //                    tampung[i] = ' ';
@@ -41,13 +42,12 @@ public class MainActivity extends AppCompatActivity {
         // menggunakan ascii
         for(int i=0; i<plain.length(); i++){
             int x = (plain.charAt(i)-94)%26+97;
-            tampung[i] = (char)x;
+            int y = (x-92)%26+97;
+            tampung[i] = (char)y;
         }
 
         String hasil = new String(tampung);
 
-        ciphertext.setText(hasil);
-
-
+        ciphertext.setText(hasil+"");
     }
 }
