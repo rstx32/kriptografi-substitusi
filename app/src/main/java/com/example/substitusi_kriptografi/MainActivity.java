@@ -21,6 +21,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enkripsi(View view) {
-        ciphertext.setText(plaintext.getText());
+        // menggunakan tabel
+        String alfabet  = "abcdefghijklmnopqrstuvwxyz";
+        String key      = "defghijklmnopqrstuvwxyzabc";
+        String plain    = plaintext.getText().toString();
+        char[] tampung  = new char[plain.length()];
+
+        for(int i=0; i<plain.length(); i++){
+            for(int j=0; j<alfabet.length(); j++){
+                if(plain.charAt(i)==alfabet.charAt(j)){
+                    tampung[i] = key.charAt(j);
+                    break;
+                }
+            }
+        }
+
+        String hasil = new String(tampung);
+
+        ciphertext.setText(hasil);
     }
 }
