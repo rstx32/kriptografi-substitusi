@@ -52,7 +52,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="hasil plain text"
-            android:editable="false"
             android:textAlignment="center"/>
 
     </LinearLayout>

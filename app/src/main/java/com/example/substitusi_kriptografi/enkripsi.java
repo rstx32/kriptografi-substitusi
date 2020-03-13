@@ -1,13 +1,11 @@
 package com.example.substitusi_kriptografi;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
 public class enkripsi extends AppCompatActivity {
-
     EditText plaintext, ciphertext;
 
     @Override
@@ -43,13 +41,13 @@ public class enkripsi extends AppCompatActivity {
 //        ciphertext.setText(hasil+"");
 
 //        ***MENGGUNAKAN TABEL***
-        String plain    = plaintext.getText().toString();
-        char[] tampung  = new char[plain.length()];
+        String plain = plaintext.getText().toString();
+        char[] tampung = new char[plain.length()];
 
-        String alfabet  = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String key1     = "defghijklmnopqrstuvwxyzabcDEFGHIJKLMNOPQRSTUVWXYZABC";
-        String key2     = "ijklmnopqrstuvwxyzabcdefghIJKLMNOPQRSTUVWXYZABCDEFGH";
-        for(int i=0; i<plain.length(); i++) {
+        String alfabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String key1 = "defghijklmnopqrstuvwxyzabcDEFGHIJKLMNOPQRSTUVWXYZABC";
+        String key2 = "ijklmnopqrstuvwxyzabcdefghIJKLMNOPQRSTUVWXYZABCDEFGH";
+        for (int i = 0; i < plain.length(); i++) {
             for (int j = 0; j < alfabet.length(); j++) {
                 if (plain.charAt(i) == alfabet.charAt(j)) {
                     tampung[i] = key1.charAt(j);
@@ -61,6 +59,6 @@ public class enkripsi extends AppCompatActivity {
             }
         }
         String hasil = new String(tampung);
-        ciphertext.setText(hasil+"");
+        ciphertext.setText(hasil + "");
     }
 }

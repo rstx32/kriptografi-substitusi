@@ -52,7 +52,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="hasil cipher text"
-            android:editable="false"
             android:textAlignment="center"/>
 
     </LinearLayout>
