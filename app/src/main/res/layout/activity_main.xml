@@ -4,56 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/background">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="30dp">
 
-        <TextView
-            android:id="@+id/textview_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="30dp"
-            android:text="@string/keterangan"
-            android:textAlignment="center"
-            android:textSize="18sp" />
+    <Button
+        android:id="@+id/buttonHome_enkripsi"
+        android:layout_width="176dp"
+        android:layout_height="58dp"
+        android:text="enkripsi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.408"/>
 
-        <EditText
-            android:id="@+id/editText_plaintext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/hint_edittext"
-            android:textAlignment="center"/>
+    <Button
+        android:id="@+id/buttonHome_dekripsi"
+        android:layout_width="176dp"
+        android:layout_height="58dp"
+        android:text="dekripsi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"/>
 
-        <Button
-            android:id="@+id/button_enkripsi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Enkripsi"
-            android:onClick="enkripsi"/>
+    <TextView
+        android:id="@+id/identitas_nama"
+        android:layout_width="360dp"
+        android:layout_height="24dp"
+        android:text="RESTU INDERA DWIHANDOKO"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.159" />
 
-        <TextView
-            android:id="@+id/textview_info_cipher"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/info_cipher_text"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/editText_cipher"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="hasil cipher text"
-            android:editable="false"
-            android:textAlignment="center"/>
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/identitas_nim"
+        android:layout_width="230dp"
+        android:layout_height="24dp"
+        android:text="A11.2017.10616"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.196" />
 </androidx.constraintlayout.widget.ConstraintLayout>
